@@ -1,6 +1,7 @@
+import { TypographyPropsType } from "./type"
 
-export const Typography = () => {
+export const Typography = ({text}: TypographyPropsType) => {
   return (
-    <div>Typography</div>
+    <div>{text}</div>
   )
 }
