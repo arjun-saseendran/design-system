@@ -3,7 +3,7 @@ import { TypographyPropsType } from "./type";
 
 export const Typography:React.FC<TypographyPropsType> = ({
   tag = "p",
-  className,
+  classes,
   text = "Text not provided",
   children,
   style,
@@ -13,7 +13,7 @@ export const Typography:React.FC<TypographyPropsType> = ({
   return React.createElement(
     tag,
     {
-      className: className,
+      className: classes,
       style: style,
       "aria-label": ariaLabel,
       "aria-labelledby": ariaLabelledBy,
