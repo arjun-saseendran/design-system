@@ -2,10 +2,12 @@ import "./App.css";
 import { Button } from "./components/button/Button";
 import viteLogo from "/vite.svg";
 import { Typography } from "../src/components/atom/typography/Typography";
+import { useState } from "react";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false)
   const handleClick = () => {
-    alert("hello world!");
+    setIsLoading(true)
   };
   return (
     <>
@@ -14,8 +16,10 @@ function App() {
         classes="mb-5"
       />
       <Button
+        variant="secondary"
+        variantType="outline"
         type="button"
-        classes="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded cursor-pointer"
+        classes="test"
         autoFocus
         onClick={handleClick}
       >
@@ -29,12 +33,13 @@ function App() {
       />
       <Button
         type="button"
-        classes="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded cursor-pointer"
-        disabled
-        autoFocus
+        variant="tertiary"
+        variantType="solid"
+        isLoading={isLoading}
+        onClick={handleClick}
       >
         <img src={viteLogo} className="w-5 h-5" alt="vite logo" />
-        hello
+        Payment
       </Button>
       <hr className="my-5" />
     </>

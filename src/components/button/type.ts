@@ -1,12 +1,11 @@
+type ButtonVariant = "primary" | "secondary" | "tertiary";
+type ButtonVariantType = "outline" | "solid";
 
-type ButtonType = 'submit' | 'reset' | 'button'
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-    
-    type?: ButtonType;
-    classes?: string;
-
-
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  variantType?: ButtonVariantType;
+  classes?: string;
+  isLoading?: boolean;
 }
 
-export default ButtonProps
+export default ButtonProps;
