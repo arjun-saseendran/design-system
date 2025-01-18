@@ -13,21 +13,18 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   // Classes
   const btnClasses = classNames(
-    "py-2 px-4 cursor-pointer rounded",
+    "py-2 px-4 cursor-pointer rounded text-white font-bold",
     {
-      "bg-primary text-white font-bold":
-        variant === "primary" && variantType === "solid",
-      "bg-secondary text-black font-bold":
-        variant === "secondary" && variantType === "solid",
-      "bg-tertiary text-white font-bold":
-        variant === "tertiary" && variantType === "solid",
-      "border-2 border-primary text-white font-bold":
+      "bg-primary  ": variant === "primary" && variantType === "solid",
+      "bg-secondary ": variant === "secondary" && variantType === "solid",
+      "bg-tertiary ": variant === "tertiary" && variantType === "solid",
+      "border-2 border-primary ":
         variant === "primary" && variantType === "outline",
-      "border-2 border-secondary text-white font-bold":
+      "border-2 border-secondary ":
         variant === "secondary" && variantType === "outline",
-      "border-2 border-tertiary text-white font-bold":
+      "border-2 border-tertiary ":
         variant === "tertiary" && variantType === "outline",
-        'cursor-not-allowed opacity-50': isLoading,
+      "cursor-not-allowed opacity-50": isLoading,
     },
     classes
   );
