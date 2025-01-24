@@ -1,7 +1,8 @@
 import classNames from "classnames";
+import ButtonProps from "./type";
 
 
-const getButtonClasses = () =>{
+const getButtonClasses = ({variant, variantType, classes, isLoading,}: ButtonProps) =>{
 
 
     const btnClasses = classNames(
@@ -24,4 +25,6 @@ const getButtonClasses = () =>{
     return btnClasses;
 
 }
+
+export default getButtonClasses;
 

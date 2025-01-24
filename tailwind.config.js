@@ -5,6 +5,9 @@ export default {
     extend: {
       colors: { primary: "#31363f", secondary: "#007aff", tertiary: "#d9d9d9" },
     },
+    fontFamily: {
+      openSans: ["Open sans", "sans-serif"],
+    },
   },
   plugins: [],
 };

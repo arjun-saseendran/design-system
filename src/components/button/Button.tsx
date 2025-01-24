@@ -1,4 +1,4 @@
-
+import getButtonClasses from "./utility";
 import ButtonProps from "./type";
 
 export const Button: React.FC<ButtonProps> = ({
@@ -12,9 +12,12 @@ export const Button: React.FC<ButtonProps> = ({
   ...restProps
 }) => {
   // Classes
-  
-
-
+  const btnClasses = getButtonClasses({
+    variant,
+    variantType,
+    classes,
+    isLoading,
+  });
   return (
     <>
       <button
