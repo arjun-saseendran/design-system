@@ -17,7 +17,7 @@ const getButtonClasses = ({variant, variantType, classes, isLoading,}: ButtonPro
           variant === "secondary" && variantType === "outline",
         "border-2 border-tertiary ":
           variant === "tertiary" && variantType === "outline",
-        "cursor-not-allowed opacity-50": isLoading,
+        "cursor-not-allowed": isLoading,
       },
       classes
     );
