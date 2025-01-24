@@ -1,10 +1,11 @@
-import React from 'react'
+import {FC} from 'react'
 import { MediaProps } from './type'
 
-export const Media = () => {
+
+export const Media: FC<MediaProps> = ({src, alt, mediaClasses, containerClasses}) => {
   return (
-    <div>
-        <img src="" alt="" />
+    <div className={containerClasses}>
+        <img className={mediaClasses} src={src} alt={alt} />
     </div>
   )
 }
