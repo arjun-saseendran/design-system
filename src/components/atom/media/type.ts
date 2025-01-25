@@ -1,8 +1,8 @@
-import { VideoHTMLAttributes } from "react";
+import { VideoHTMLAttributes, ImgHTMLAttributes } from "react";
 
-type MediaType = "image" | "video";
+export type MediaType = "image" | "video";
 
-type CommonProps = {
+export type CommonProps = {
   type: MediaType;
   src: string;
   alt: string;
@@ -10,6 +10,7 @@ type CommonProps = {
   containerClasses?: string;
 };
 
-export interface MediaProps extends VideoHTMLAttributes<HTMLVideoElement> {
-  
-}
+export type ImageProps = CommonProps & ImgHTMLAttributes<HTMLImageElement>;
+export type VideoProps = CommonProps & VideoHTMLAttributes<HTMLVideoElement>;
+
+export type MediaProps = ImageProps | VideoProps;

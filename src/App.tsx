@@ -36,7 +36,7 @@ function App() {
         src={designSystem}
         alt={"Design System"}
         containerClasses=""
-        mediaClasses="w-full h-full rounded object-cover"
+        mediaClasses="rounded object-cover"
       />
     </>
   );
