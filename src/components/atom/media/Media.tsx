@@ -2,15 +2,15 @@ import {FC} from 'react'
 import { MediaProps } from './type'
 
 
-export const Media: FC<MediaProps> = ({type, src, alt, mediaClasses, containerClasses}) => {
+export const Media: FC<MediaProps> = ({type, src, alt, mediaClasses, containerClasses, ...restProps}) => {
   return (
     <div className={containerClasses}>
 
         {
             type === 'image' ? (
-                <img className={mediaClasses} src={src} alt={alt} />
+                <img src={src} alt={alt} className={mediaClasses} {...restProps}  />
             ) : (
-                <video src={src}/>
+                <video src={src} {...restProps}/>
             )
         }
         

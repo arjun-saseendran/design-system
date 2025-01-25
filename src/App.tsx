@@ -23,6 +23,8 @@ function App() {
         alt={"Ten Seconds"}
         containerClasses="w-[400px] h-[400]px"
         mediaClasses="rounded object-cover"
+        autoPlay
+        muted
       />
       <Typography
         text="Design System : Media Component: Image"
@@ -33,8 +35,8 @@ function App() {
         type="image"
         src={designSystem}
         alt={"Design System"}
-        containerClasses="w-[400px] h-[400]px"
-        mediaClasses="rounded object-cover"
+        containerClasses=""
+        mediaClasses="w-full h-full rounded object-cover"
       />
     </>
   );
