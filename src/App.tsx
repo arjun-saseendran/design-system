@@ -2,7 +2,8 @@ import "./App.css";
 import { Typography } from "../src/components/atom/typography/Typography";
 import { Media } from "./components/atom/media/Media";
 import designSystem from "./assets/designSystem.jpg";
-import tenSeconds from './assets/tenSeconds.mp4'
+import tenSeconds from "./assets/tenSeconds.mp4";
+import { Card } from "./components/molecule/Card";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         text="Design System : Media Component"
         classes="mb-8 text-[30px] font-bold text-black"
       />
-      
+
       <Typography
         text="Design System : Media Component: Video"
         classes="mt-4 text-[18px] font-bold text-black"
@@ -38,6 +39,7 @@ function App() {
         containerClasses=""
         mediaClasses="rounded object-cover"
       />
+      <Card />
     </>
   );
 }
