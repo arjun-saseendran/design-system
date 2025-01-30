@@ -4,6 +4,7 @@ import { Media } from "./components/atom/media/Media";
 import designSystem from "./assets/designSystem.jpg";
 import tenSeconds from "./assets/tenSeconds.mp4";
 import { Card } from "./components/molecule/Card";
+import { CardVariants } from "./pages/card/CardVariants";
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
         containerClasses=""
         mediaClasses="rounded object-cover"
       />
-      <Card />
+      <CardVariants />
     </>
   );
 }
